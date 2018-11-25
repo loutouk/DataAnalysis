@@ -1,0 +1,7 @@
+checking_status = <0
+|   credit_history  = critical/other existing credit: good (67.0/18.0)
+checking_status = 0<=X<200
+|   credit_amount  <= 9283: good (244.0/86.0)
+|   credit_amount  > 9283: bad (21.0/4.0)
+checking_status = no checking: good (388.0/43.0)
+checking_status = >=200: good (63.0/14.0)

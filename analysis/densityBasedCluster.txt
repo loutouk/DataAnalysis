@@ -1,0 +1,124 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.MakeDensityBasedClusterer -M 1.0E-6 -W weka.clusterers.SimpleKMeans -- -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     morePreciseNominalData-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    988
+Attributes:   10
+              checking_status
+              credit_history
+              purpose
+              credit_amount
+              saving_status
+              employment
+              personal_status
+              age
+              job
+Ignored:
+              class
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+MakeDensityBasedClusterer: 
+
+Wrapped clusterer: 
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 4620.0
+
+Initial starting points (random):
+
+Cluster 0: 'no checking','critical/other existing credit','new car',credit_amount_less_2000,>=1000,>=7,'male single',age_less_70,skilled
+Cluster 1: 0<=X<200,'all paid',business,credit_amount_less_4000,100<=X<500,4<=X<7,'male single',age_less_40,skilled
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                                         Cluster#
+Attribute                                       Full Data                       0                       1
+                                                  (988.0)                 (737.0)                 (251.0)
+=========================================================================================================
+checking_status                               no checking             no checking                0<=X<200
+credit_history                              existing paid           existing paid           existing paid
+purpose                                          radio/tv                radio/tv                 new car
+credit_amount                     credit_amount_less_2000 credit_amount_less_2000 credit_amount_less_4000
+saving_status                                        <100                    <100                    <100
+employment                                         1<=X<4                  1<=X<4                  4<=X<7
+personal_status                               male single             male single             male single
+age                                           age_less_40             age_less_40             age_less_40
+job                                               skilled                 skilled                 skilled
+
+
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.7455
+
+Attribute: checking_status
+Discrete Estimator. Counts =  195 120 372 54  (Total = 741)
+Attribute: credit_history
+Discrete Estimator. Counts =  228 390 65 29 30  (Total = 742)
+Attribute: purpose
+Discrete Estimator. Counts =  264 39 131 115 80 73 11 19 8 7  (Total = 747)
+Attribute: credit_amount
+Discrete Estimator. Counts =  288 31 144 23 46 18 33 60 21 79 5  (Total = 748)
+Attribute: saving_status
+Discrete Estimator. Counts =  146 438 55 37 66  (Total = 742)
+Attribute: employment
+Discrete Estimator. Counts =  198 313 79 39 113  (Total = 742)
+Attribute: personal_status
+Discrete Estimator. Counts =  401 229 38 73  (Total = 741)
+Attribute: age
+Discrete Estimator. Counts =  34 110 131 63 238 162 5 2  (Total = 745)
+Attribute: job
+Discrete Estimator. Counts =  475 151 103 12  (Total = 741)
+
+Cluster: 1 Prior probability: 0.2545
+
+Attribute: checking_status
+Discrete Estimator. Counts =  79 147 18 11  (Total = 255)
+Attribute: credit_history
+Discrete Estimator. Counts =  65 134 24 13 20  (Total = 256)
+Attribute: purpose
+Discrete Estimator. Counts =  15 11 49 120 24 26 3 5 4 4  (Total = 261)
+Attribute: credit_amount
+Discrete Estimator. Counts =  25 10 46 14 14 14 12 74 15 36 2  (Total = 262)
+Attribute: saving_status
+Discrete Estimator. Counts =  37 158 9 13 39  (Total = 256)
+Attribute: employment
+Discrete Estimator. Counts =  54 21 97 25 59  (Total = 256)
+Attribute: personal_status
+Discrete Estimator. Counts =  141 80 14 20  (Total = 255)
+Attribute: age
+Discrete Estimator. Counts =  12 38 42 13 90 58 4 2  (Total = 259)
+Attribute: job
+Discrete Estimator. Counts =  150 48 45 12  (Total = 255)
+
+
+Time taken to build model (full training data) : 0.06 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      784 ( 79%)
+1      204 ( 21%)
+
+
+Log likelihood: -12.65365
+
+
+Class attribute: class
+Classes to Clusters:
+
+   0   1  <-- assigned to cluster
+ 582 112 | good
+ 202  92 | bad
+
+Cluster 0 <-- good
+Cluster 1 <-- bad
+
+Incorrectly clustered instances : 314.0  31.7814 %
+

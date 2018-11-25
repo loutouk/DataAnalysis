@@ -1,0 +1,104 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     morePreciseNominalData-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    988
+Attributes:   10
+              checking_status
+              credit_history
+              purpose
+              credit_amount
+              saving_status
+              employment
+              personal_status
+              age
+              job
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SimpleLogistic:
+
+Class good :
+0.53 + 
+[checking_status=<0] * -0.32 +
+[checking_status=no checking] * 0.62 +
+[checking_status=>=200] * 0.28 +
+[credit_history=critical/other existing credit] * 0.35 +
+[credit_history=no credits/all paid] * -0.53 +
+[credit_history=all paid] * -0.43 +
+[purpose=education] * -0.44 +
+[purpose=new car] * -0.23 +
+[purpose=used car] * 0.27 +
+[purpose=retraining] * 0.54 +
+[credit_amount=credit_amount_less_8000] * -0.26 +
+[credit_amount=credit_amount_less_5000] * -0.43 +
+[credit_amount=credit_amount_less_10000] * -0.48 +
+[credit_amount=credit_amount_less_7000] * -0.29 +
+[credit_amount=credit_amount_less_4000] * 0.24 +
+[credit_amount=credit_amount_less_15000] * -0.69 +
+[saving_status=<100] * -0.33 +
+[saving_status=100<=X<500] * -0.24 +
+[employment=4<=X<7] * 0.2  +
+[employment=<1] * -0.11 +
+[personal_status=male single] * 0.2  +
+[age=age_less_25] * -0.15 +
+[age=age_less_80] * 0.47 +
+[job=unskilled resident] * 0.13
+
+Class bad :
+-0.53 + 
+[checking_status=<0] * 0.32 +
+[checking_status=no checking] * -0.62 +
+[checking_status=>=200] * -0.28 +
+[credit_history=critical/other existing credit] * -0.35 +
+[credit_history=no credits/all paid] * 0.53 +
+[credit_history=all paid] * 0.43 +
+[purpose=education] * 0.44 +
+[purpose=new car] * 0.23 +
+[purpose=used car] * -0.27 +
+[purpose=retraining] * -0.54 +
+[credit_amount=credit_amount_less_8000] * 0.26 +
+[credit_amount=credit_amount_less_5000] * 0.43 +
+[credit_amount=credit_amount_less_10000] * 0.48 +
+[credit_amount=credit_amount_less_7000] * 0.29 +
+[credit_amount=credit_amount_less_4000] * -0.24 +
+[credit_amount=credit_amount_less_15000] * 0.69 +
+[saving_status=<100] * 0.33 +
+[saving_status=100<=X<500] * 0.24 +
+[employment=4<=X<7] * -0.2 +
+[employment=<1] * 0.11 +
+[personal_status=male single] * -0.2 +
+[age=age_less_25] * 0.15 +
+[age=age_less_80] * -0.47 +
+[job=unskilled resident] * -0.13
+
+
+Time taken to build model: 0.58 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         728               73.6842 %
+Incorrectly Classified Instances       260               26.3158 %
+Kappa statistic                          0.3081
+Mean absolute error                      0.3351
+Root mean squared error                  0.42  
+Relative absolute error                 80.1237 %
+Root relative squared error             91.8657 %
+Total Number of Instances              988     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.879    0.599    0.776      0.879    0.824      0.318    0.754     0.872     good
+                 0.401    0.121    0.584      0.401    0.476      0.318    0.754     0.535     bad
+Weighted Avg.    0.737    0.457    0.719      0.737    0.721      0.318    0.754     0.772     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 610  84 |   a = good
+ 176 118 |   b = bad
+

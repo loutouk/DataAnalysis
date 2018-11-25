@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     cleanedData-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    988
+Attributes:   10
+              checking_status
+              credit_history 
+              purpose 
+              credit_amount 
+              saving_status 
+              employment 
+              personal_status 
+              age 
+              job 
+              class 
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+credit_amount :
+	< 883.0	-> good
+	< 922.0	-> bad
+	< 938.0	-> good
+	< 979.5	-> bad
+	< 1206.5	-> good
+	< 1223.5	-> bad
+	< 1267.5	-> good
+	< 1286.0	-> bad
+	< 1821.5	-> good
+	< 1865.5	-> bad
+	< 3913.5	-> good
+	< 3969.0	-> bad
+	< 4049.5	-> good
+	< 4329.5	-> bad
+	< 4726.0	-> good
+	< 5024.0	-> bad
+	< 6322.5	-> good
+	< 6564.0	-> bad
+	< 6750.0	-> good
+	< 6917.5	-> bad
+	< 7760.5	-> good
+	< 8109.5	-> bad
+	< 9340.5	-> good
+	< 10331.5	-> bad
+	< 11307.0	-> good
+	>= 11307.0	-> bad
+(736/988 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         736               74.4939 %
+Incorrectly Classified Instances       252               25.5061 %
+Kappa statistic                          0.2944
+Mean absolute error                      0.2551
+Root mean squared error                  0.505 
+Relative absolute error                 60.9886 %
+Root relative squared error            110.4651 %
+Total Number of Instances              988     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.918    0.663    0.766      0.918    0.835      0.319    0.627     0.760     good
+                 0.337    0.082    0.635      0.337    0.440      0.319    0.627     0.411     bad
+Weighted Avg.    0.745    0.490    0.727      0.745    0.717      0.319    0.627     0.656     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 637  57 |   a = good
+ 195  99 |   b = bad
+

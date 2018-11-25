@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     nominalData-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    988
+Attributes:   10
+              checking_status
+              credit_history
+              purpose
+              credit_amount
+              saving_status
+              employment
+              personal_status
+              age
+              job
+              class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (99 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 30
+
+Size of set of large itemsets L(2): 134
+
+Size of set of large itemsets L(3): 154
+
+Size of set of large itemsets L(4): 38
+
+Size of set of large itemsets L(5): 1
+
+Best rules found:
+
+ 1. checking_status=no checking purpose=radio/tv 125 ==> class=good 118    <conf:(0.94)> lift:(1.34) lev:(0.03) [30] conv:(4.65)
+ 2. checking_status=no checking employment=>=7 114 ==> class=good 107    <conf:(0.94)> lift:(1.34) lev:(0.03) [26] conv:(4.24)
+ 3. checking_status=no checking credit_history=critical/other existing credit 153 ==> class=good 143    <conf:(0.93)> lift:(1.33) lev:(0.04) [35] conv:(4.14)
+ 4. checking_status=no checking credit_history=critical/other existing credit age=age_less_50 118 ==> class=good 110    <conf:(0.93)> lift:(1.33) lev:(0.03) [27] conv:(3.9)
+ 5. checking_status=no checking personal_status=male single age=age_less_50 job=skilled 117 ==> class=good 109    <conf:(0.93)> lift:(1.33) lev:(0.03) [26] conv:(3.87)
+ 6. checking_status=no checking personal_status=male single job=skilled 149 ==> class=good 138    <conf:(0.93)> lift:(1.32) lev:(0.03) [33] conv:(3.69)
+ 7. checking_status=no checking credit_amount=credit_amount_more_1000 128 ==> class=good 118    <conf:(0.92)> lift:(1.31) lev:(0.03) [28] conv:(3.46)
+ 8. checking_status=no checking age=age_less_50 job=skilled 195 ==> class=good 179    <conf:(0.92)> lift:(1.31) lev:(0.04) [42] conv:(3.41)
+ 9. checking_status=no checking credit_amount=credit_amount_more_2000 129 ==> class=good 118    <conf:(0.91)> lift:(1.3) lev:(0.03) [27] conv:(3.2)
+10. checking_status=no checking credit_history=existing paid job=skilled 125 ==> class=good 114    <conf:(0.91)> lift:(1.3) lev:(0.03) [26] conv:(3.1)
+

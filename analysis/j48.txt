@@ -1,0 +1,102 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     cleanedData-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    988
+Attributes:   10
+              checking_status
+              credit_history 
+              purpose 
+              credit_amount 
+              saving_status 
+              employment 
+              personal_status 
+              age 
+              job 
+              class 
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+checking_status = <0
+|   credit_history  = critical/other existing credit: good (67.0/18.0)
+|   credit_history  = existing paid
+|   |   purpose  = radio/tv
+|   |   |   employment  = >=7: good (6.0/1.0)
+|   |   |   employment  = 1<=X<4
+|   |   |   |   job  = skilled: bad (11.0/3.0)
+|   |   |   |   job  = unskilled resident: good (4.0/2.0)
+|   |   |   |   job  = high qualif/self emp/mgmt: good (2.0)
+|   |   |   |   job  = unemp/unskilled non res: bad (0.0)
+|   |   |   employment  = 4<=X<7: good (6.0/3.0)
+|   |   |   employment  = unemployed: bad (1.0)
+|   |   |   employment  = <1
+|   |   |   |   age  <= 30: good (5.0/1.0)
+|   |   |   |   age  > 30: bad (4.0)
+|   |   purpose  = education: bad (7.0/2.0)
+|   |   purpose  = furniture/equipment
+|   |   |   employment  = >=7
+|   |   |   |   credit_amount  <= 1680: good (3.0)
+|   |   |   |   credit_amount  > 1680: bad (6.0/1.0)
+|   |   |   employment  = 1<=X<4
+|   |   |   |   age  <= 23: bad (5.0/1.0)
+|   |   |   |   age  > 23: good (12.0/1.0)
+|   |   |   employment  = 4<=X<7: good (5.0/2.0)
+|   |   |   employment  = unemployed: bad (5.0/2.0)
+|   |   |   employment  = <1: good (8.0/2.0)
+|   |   purpose  = new car: bad (42.0/15.0)
+|   |   purpose  = used car
+|   |   |   credit_amount  <= 6850: good (10.0/1.0)
+|   |   |   credit_amount  > 6850: bad (4.0)
+|   |   purpose  = business
+|   |   |   age  <= 23: good (2.0)
+|   |   |   age  > 23: bad (2.0)
+|   |   purpose  = domestic appliance: bad (5.0/1.0)
+|   |   purpose  = repairs: bad (1.0)
+|   |   purpose  = other: good (2.0)
+|   |   purpose  = retraining: bad (1.0)
+|   credit_history  = delayed previously: bad (12.0/3.0)
+|   credit_history  = no credits/all paid: bad (13.0/3.0)
+|   credit_history  = all paid: bad (21.0/6.0)
+checking_status = 0<=X<200
+|   credit_amount  <= 9283: good (244.0/86.0)
+|   credit_amount  > 9283: bad (21.0/4.0)
+checking_status = no checking: good (388.0/43.0)
+checking_status = >=200: good (63.0/14.0)
+
+Number of Leaves  : 	34
+
+Size of the tree : 	46
+
+
+Time taken to build model: 0.07 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         720               72.8745 %
+Incorrectly Classified Instances       268               27.1255 %
+Kappa statistic                          0.2711
+Mean absolute error                      0.3457
+Root mean squared error                  0.4455
+Relative absolute error                 82.6485 %
+Root relative squared error             97.4499 %
+Total Number of Instances              988     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.888    0.646    0.764      0.888    0.821      0.285    0.692     0.794     good
+                 0.354    0.112    0.571      0.354    0.437      0.285    0.692     0.473     bad
+Weighted Avg.    0.729    0.487    0.707      0.729    0.707      0.285    0.692     0.699     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 616  78 |   a = good
+ 190 104 |   b = bad
+
+ 
